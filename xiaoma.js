@@ -20,11 +20,10 @@ var obj = JSON.parse(body);
 const api_1 = '/ai-app-api/v1/book/previewMusic';
 const api_2 = '/ai-app-api/v1/pianoTrain/getSimpleDate';
 const api_3 = '/ai-app-api/v1/book/musicList';
-const time = '/vip/spi/mservice';
 
 if (url.indexOf(api_1) != -1 || url.indexOf(api_2) != -1 || url.indexOf(api_3) != -1) {
-	obj.data["isFree"] = "1";
-	obj.data["hasFree"] = "1";
+	obj.data["isFree"] = 1;
+	obj.data["hasFree"] = 1;
 	body = JSON.stringify(obj);
 }
 $done({body});
