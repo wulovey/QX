@@ -15,19 +15,7 @@ hostname = api.xiaomapeilian.com
 **************************/
 var body = $response.body;
 var url = $request.url;
-var obj = JSON.parse(body);
 
-const api_1 = '/ai-app-api/v1/book/previewMusic';
-const api_2 = '/ai-app-api/v1/pianoTrain/getSimpleDate';
-const api_3 = '/ai-app-api/v1/book/musicList';
-
-if (url.indexOf(api_1) != -1 || url.indexOf(api_2) != -1 || url.indexOf(api_3) != -1) {
-	/*
-	obj.data["isFree"] = 1;
-	obj.data["hasFree"] = 1;
-	body = JSON.stringify(obj);
-	*/
 	body=body.replace("\"isFree\":0","\"isFree\":1");
 	body=body.replace("\"hasFree\":0","\"hasFree\":1");
-}
 $done({body});
