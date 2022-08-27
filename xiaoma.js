@@ -15,7 +15,7 @@ hostname = dss.xiaoyezi.com
 **************************/
 
 var body = $response.body
-    .replace("\"student_status\":1", "\"student_status\":2")
+    //.replace("\"student_status\":1", "\"student_status\":2")
     .replace("\"trial_duration\":3", "\"trial_duration\":99999999")
     .replace("\"is_free\":\"0\"", "\"is_free\":\"1\"");
 $done({ body });
